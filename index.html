@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <title>TOMBOLA 100% Digitale by Prizy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Bienvenue à la Tombola 100% Digitale by Prizy - Là où la chance devient réalité !" />
+    <meta
+      name="description"
+      content="Bienvenue à la Tombola 100% Digitale by Prizy - Là où la chance devient réalité !"
+    />
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/read-excel-file@5.x/bundle/read-excel-file.min.js"></script>
@@ -29,7 +32,7 @@
               id="nbwinners"
               class="formbold-form-input"
               placeholder="Saisissez le nombre de gagnants à tirer au sort"
-              value="1"
+              
               min="1"
               step="1"
               required
@@ -76,7 +79,7 @@
             </div>
           </div>
 
-          <div id="selected-file" style="margin-bottom: 30px;"></div>
+          <div id="selected-file" style="margin-bottom: 30px"></div>
 
           <div>
             <input
@@ -98,8 +101,18 @@
 
       const form = document.getElementById("form");
       const file = document.getElementById("file");
+      const numberInput = document.getElementById("nbwinners");
+
+      var invalidChars = ["-", "+", "e", ".", ","];
+
+      numberInput.addEventListener("keydown", function (e) {
+        if (invalidChars.includes(e.key)) {
+          e.preventDefault();
+        }
+      });
 
       file.addEventListener("change", function (e) {
+        e.preventDefault();
         if (e.target.files[0]) {
           const selectedfileContainer =
             document.getElementById("selected-file");
@@ -116,7 +129,6 @@
       form.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        const numberInput = document.getElementById("nbwinners");
         const resultdiv = document.getElementById("result");
 
         resultdiv.innerHTML = "";
@@ -130,7 +142,7 @@
 
             var stop = false;
             while (!stop) {
-              const newwinner = getRandomInt(1, rows.length-1);
+              const newwinner = getRandomInt(1, rows.length - 1);
               if (!winnersindexes.has(newwinner)) {
                 winnersindexes.add(newwinner);
               }
@@ -146,7 +158,7 @@
 
             var cpt = 1;
             for (const winnerindex of winnersindexes) {
-                console.log(winnerindex)
+              console.log(winnerindex);
               var winnerElementWrapper = document.createElement("div");
               winnerElementWrapper.className = "formbold-file-list";
 
