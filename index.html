@@ -169,7 +169,12 @@
 
               var winnerSpan = document.createElement("span");
               winnerSpan.className = "formbold-file-name";
-              winnerSpan.innerHTML = `<b>Gagnant numéro : #${cpt}</b>`;
+              winnerSpan.innerHTML = `<b>Gagnant numéro : #${cpt}</b><br /><br />`;
+              winnerElementContent.append(winnerSpan);
+
+              winnerSpan = document.createElement("span");
+              winnerSpan.className = "formbold-file-name";
+              winnerSpan.innerHTML = `Index sur Excel : <b>#${winnerindex}</b>`;
               winnerElementContent.append(winnerSpan);
 
               for (
