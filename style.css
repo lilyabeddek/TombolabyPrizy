@@ -4,9 +4,50 @@
   box-sizing: border-box;
 }
 
+.container {
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2rem 2rem 1.5rem;
+}
+
+.container .cta-form {
+  width: 100%;
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.cta-form h2 {
+  font-size: 2.3rem;
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 4rem;
+}
+
+.cta-form p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  color: white;
+  width: 100%;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: #e9a1d2;
+  font-weight: 500;
+}
 body {
   font-family: "Inter", sans-serif;
   background-color: #e8f7f4;
+  background-image: url("assets/background.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -32,15 +73,14 @@ body {
   justify-content: center;
   flex-direction: column;
   margin: auto;
-  padding: 48px 0;
+  padding: 0 0 48px 0;
   width: 100%;
 }
 
 .formbold-form-wrapper {
   margin: 0 auto;
-  max-width: 550px;
   width: 100%;
-  background: white;
+  background: #ffffff96;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -54,11 +94,9 @@ body {
   display: block;
   font-weight: 500;
   font-size: 16px;
-  color: #07074d;
+  color: #0a0a0a;
   margin-bottom: 12px;
 }
-
-
 
 .formbold-form-label-2 {
   font-weight: 600;
@@ -71,10 +109,10 @@ body {
   padding: 12px 24px;
   border-radius: 6px;
   border: 1px solid #e0e0e0;
-  background: white;
+  background: transparent;
   font-weight: 500;
   font-size: 16px;
-  color: #6b7280;
+  color: #0a0a0a;
   outline: none;
   resize: none;
 }
@@ -107,7 +145,7 @@ body {
 .formbold-drop-file {
   display: block;
   font-weight: 600;
-  color: #07074d;
+  color: #0a0a0a;
   font-size: 20px;
   margin-bottom: 8px;
 }
@@ -177,7 +215,7 @@ body {
 .formbold-browse {
   font-weight: 700;
   font-size: 16px;
-  color: #e9a1d2;
+  color: #d884be;
   display: inline-block;
   padding: 8px 28px;
   border: 1px solid #e0e0e0;
@@ -187,7 +225,8 @@ body {
 .formbold-file-list {
   width: 100%;
   border-radius: 6px;
-  background: #f5f7fb;
+  background-color: #f5f7fb;
+  background-image: linear-gradient(316deg, #e9a1d21b 0%, #f79ad310 74%);
   border: 1px solid #e9a1d2;
   padding: 16px 32px;
 }
@@ -201,7 +240,7 @@ body {
 }
 
 .formbold-file-item button {
-  color: #07074d;
+  color: #0a0a0a;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -210,14 +249,86 @@ body {
 .formbold-file-name {
   font-weight: 500;
   font-size: 16px;
-  color: #07074d;
+  color: #0a0a0a;
   padding-right: 12px;
 }
 
 .formlogo {
-  max-width: 100px;
-  width: 50%;
-  margin-bottom: 1rem;
+  height: 60px;
+}
+
+.logosContainer {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sponsorsContainer {
+  padding: 3rem 1rem;
+  width: 100%;
+  background: #ffffff4b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.sponsorsLogosContainer {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+nav {
+  background-color: #0a0a0a4b;
+  box-shadow: 2px 2px 2px 1px rgba(153, 153, 153, 0.1);
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  z-index: 1;
+  width: 100%;
+  padding: 0 24px;
+  max-width: 1200px;
+}
+
+.copyrightscontainer {
+  padding: 20px 10px;
+  background-color: #0a0a0a;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.copyrights {
+  font-size: 1rem;
+  color: #f5f5f5;
+}
+
+img {
+  justify-self: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  object-fit: contain;
 }
 
 @media (min-width: 550px) {
@@ -227,7 +338,26 @@ body {
 }
 
 @media (max-width: 550px) {
-  .formbold-form-wrapper{
+  .formbold-form-wrapper {
     border-radius: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5rem;
+  }
+  .container .cta-form {
+    margin-bottom: 0;
+    margin-right: 10rem;
+    text-align: left;
+  }
+  .cta-form h2 {
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 1rem;
+    margin: 0;
   }
 }
