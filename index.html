@@ -33,7 +33,9 @@
       <div class="cta-form">
         <h2>TOMBOLA 100% Digitale by Prizy</h2>
         <p>
-          En collaboration avec Emploitic, Talenteo et eTalent , nous organisons la TOMBOLA 100% DIGITALE pour le Talent Day… C'est parti pour le tirage au sort !🎉 
+          En collaboration avec Emploitic, Talenteo et eTalent , nous organisons
+          la TOMBOLA 100% DIGITALE pour le Talent Day… C'est parti pour le
+          tirage au sort !🎉
         </p>
       </div>
       <div class="formbold-main-wrapper">
@@ -141,6 +143,12 @@
         return Math.floor(Math.random() * (end - start + 1) + start);
       }
 
+      const prizes = [
+        "https://drive.google.com/file/d/19My9G4Ui-1pKx9B8PAh77Srdj9tFQ47e/view?usp=sharing",
+        "https://drive.google.com/file/d/13LFALLvJVxokotiwoQ7fOFf_b2QzhBzg/view?usp=sharing",
+        "https://drive.google.com/file/d/1ybI-5ohY2ooKhoklfhpmiOhAXhXPKR61/view?usp=sharing",
+      ];
+
       const form = document.getElementById("form");
       const file = document.getElementById("file");
       const numberInput = document.getElementById("nbwinners");
@@ -232,7 +240,10 @@
 
               winnerSpan = document.createElement("span");
               winnerSpan.className = "formbold-file-name";
-              winnerSpan.innerHTML = `<br/><a href="https://prizy.co" target="_blank"> Votre récompense <i class='fas fa-angle-double-right'></a><br/>`;
+              console.log(prizes[cpt - 1]);
+              winnerSpan.innerHTML = `<br/><a href=${
+                cpt<= 3 ? prizes[cpt - 1] : prizes[2]
+              } target="_blank"> Votre récompense <i class='fas fa-angle-double-right'></a><br/>`;
               winnerElementContent.append(winnerSpan);
 
               cpt = cpt + 1;
