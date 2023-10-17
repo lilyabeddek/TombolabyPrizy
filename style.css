@@ -119,7 +119,7 @@
 
 a {
   text-decoration: none;
-  color: #e9a1d2;
+  color: #c975ae;
   font-weight: 500;
 }
 body {
@@ -304,7 +304,7 @@ body {
   width: 100%;
   border-radius: 12px;
   background-color: #f5f7fb;
-  background-image: linear-gradient(316deg, #e9a1d21b 0%, #f79ad310 74%);
+  background-image: linear-gradient(316deg, #e9a1d21b 0%, #9af7f110 74%);
   border: 1px solid #e9a1d2;
   padding: 16px 32px;
 }
