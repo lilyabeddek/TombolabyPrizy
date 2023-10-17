@@ -216,12 +216,12 @@
 
               winnerSpan = document.createElement("span");
               winnerSpan.className = "formbold-file-name";
-              winnerSpan.innerHTML = `<b>Félicitations</b><br/><br/>`;
+              winnerSpan.innerHTML = `<b>Félicitations</b><br/>`;
               winnerElementContent.append(winnerSpan);
 
               for (
-                var cellindex = 1;
-                cellindex < rows[winnerindex].length;
+                var cellindex = Math.min(rows[winnerindex].length, 1);
+                cellindex < Math.min(rows[winnerindex].length, 3);
                 cellindex++
               ) {
                 var winnerSpan = document.createElement("span");
@@ -232,7 +232,7 @@
 
               winnerSpan = document.createElement("span");
               winnerSpan.className = "formbold-file-name";
-              winnerSpan.innerHTML = `<br/><a href="https://prizy.co" target="_blank"> Votre récompense <i class='fas fa-angle-double-right'></a><br/><br/>`;
+              winnerSpan.innerHTML = `<br/><a href="https://prizy.co" target="_blank"> Votre récompense <i class='fas fa-angle-double-right'></a><br/>`;
               winnerElementContent.append(winnerSpan);
 
               cpt = cpt + 1;
