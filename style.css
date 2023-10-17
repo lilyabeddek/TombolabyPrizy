@@ -113,6 +113,7 @@
   line-height: 1.8rem;
   color: white;
   width: 100%;
+  max-width: 550px;
   font-weight: 400;
 }
 
@@ -383,8 +384,8 @@ nav {
   height: 70px;
   z-index: 1;
   width: 100%;
-  padding: 0 24px;
-  max-width: 1200px;
+  padding: 0 5rem;
+  /*max-width: 1200px;*/
 }
 
 .copyrightscontainer {
