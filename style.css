@@ -301,7 +301,7 @@ body {
 
 .formbold-file-list {
   width: 100%;
-  border-radius: 6px;
+  border-radius: 12px;
   background-color: #f5f7fb;
   background-image: linear-gradient(316deg, #e9a1d21b 0%, #f79ad310 74%);
   border: 1px solid #e9a1d2;
