@@ -28,7 +28,6 @@
         />
       </div>
     </nav>
-
     <div class="container">
       <div class="cta-form">
         <h2>TOMBOLA 100% Digitale by Prizy</h2>
@@ -119,23 +118,26 @@
         </div>
       </div>
     </div>
-    <div class="sponsorsContainer">
-      <h2
-        class="formbold-drop-file"
-        style="color: white; font-size: 28px; font-weight: 500"
-      >
-        Sponsors
-      </h2>
 
-      <div class="sponsorsLogosContainer">
-        <img class="formlogo" src="./assets/emploitic.png" alt="logo" />
-        <img class="formlogo" src="./assets/talenteo.png" alt="logo" />
-        <img class="formlogo" src="./assets/etalent.png" alt="logo" />
+    <div class="footer">
+      <div class="sponsorsContainer">
+        <h2
+          class="formbold-drop-file"
+          style="color: white; font-size: 28px; font-weight: 500"
+        >
+          Sponsors
+        </h2>
+
+        <div class="sponsorsLogosContainer">
+          <img class="formlogo" src="./assets/emploitic.png" alt="logo" />
+          <img class="formlogo" src="./assets/talenteo.png" alt="logo" />
+          <img class="formlogo" src="./assets/etalent.png" alt="logo" />
+        </div>
       </div>
-    </div>
 
-    <div class="copyrightscontainer">
-      <p class="copyrights">© Prizy, 2023. Tous droits réservés.</p>
+      <div class="copyrightscontainer">
+        <p class="copyrights">© Prizy, 2023. Tous droits réservés.</p>
+      </div>
     </div>
 
     <script>
@@ -242,7 +244,7 @@
               winnerSpan.className = "formbold-file-name";
               console.log(prizes[cpt - 1]);
               winnerSpan.innerHTML = `<br/><a href=${
-                cpt<= 3 ? prizes[cpt - 1] : prizes[2]
+                cpt <= 3 ? prizes[cpt - 1] : prizes[2]
               } target="_blank"> Click pour voir la récompense ! <i class='fas fa-angle-double-right'></a><br/>`;
               winnerElementContent.append(winnerSpan);
 
